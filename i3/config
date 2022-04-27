@@ -22,10 +22,14 @@ font pango:fontawesome 8
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex-autostart --autostart --environment i3
-exec --no-startup-id polybar
+#exec --no-startup-id polybar
 exec --no-startup-id nitrogen --restore 
 exec --no-startup-id xinput set-prop "14" "libinput Tapping Enabled" 1
 exec --no-startup-id flameshot
+#exec --no-startup-id ./Compiles/material.sh
+exec --no-startup-id waybar
+exec_always --no-startup-id i3-auto-layout
+
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
